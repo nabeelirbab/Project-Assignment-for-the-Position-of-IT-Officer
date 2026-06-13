@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --tax-bg-1: #ecfdf5;
+  --tax-bg-2: #eff6ff;
+  --tax-bg-3: #fff7ed;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply min-h-screen text-slate-900 antialiased dark:text-slate-100;
+  background:
+    radial-gradient(circle at top left, rgba(16, 185, 129, 0.22), transparent 30rem),
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.18), transparent 28rem),
+    linear-gradient(135deg, var(--tax-bg-1), var(--tax-bg-2) 48%, var(--tax-bg-3));
+}
+
+.dark body {
+  background:
+    radial-gradient(circle at top left, rgba(20, 184, 166, 0.18), transparent 30rem),
+    radial-gradient(circle at top right, rgba(37, 99, 235, 0.16), transparent 28rem),
+    linear-gradient(135deg, #020617, #0f172a 48%, #111827);
+}
+
+.tax-surface {
+  @apply rounded-[2rem] border border-white/70 bg-white/75 shadow-xl shadow-emerald-900/5 backdrop-blur dark:border-slate-700/60 dark:bg-slate-950/70 dark:shadow-black/20;
+}
+
+.card {
+  @apply rounded-2xl border border-emerald-100/80 bg-white/90 p-6 shadow-sm shadow-emerald-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-200 hover:shadow-lg hover:shadow-emerald-900/10 dark:border-slate-700 dark:bg-slate-900/90 dark:hover:border-teal-700 dark:hover:shadow-black/30;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-4 py-2 font-semibold text-white shadow-sm shadow-emerald-900/20 transition-all duration-200 hover:-translate-y-0.5 hover:from-emerald-500 hover:to-teal-500 hover:shadow-md active:translate-y-0 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-xl border border-emerald-200 bg-white/80 px-4 py-2 font-medium text-emerald-950 shadow-sm shadow-emerald-900/5 transition-all duration-200 hover:-translate-y-0.5 hover:border-emerald-300 hover:bg-emerald-50 hover:shadow active:translate-y-0 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0 dark:border-slate-600 dark:bg-slate-800/85 dark:text-slate-100 dark:hover:border-teal-600 dark:hover:bg-slate-700;
+}
+
+.input {
+  @apply w-full rounded-xl border border-emerald-200 bg-white/90 px-4 py-3 text-slate-900 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:focus:border-teal-400 dark:focus:ring-teal-900/50;
+}
+
+.badge {
+  @apply rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-800 ring-1 ring-emerald-100 transition-colors duration-200 hover:bg-emerald-100 dark:bg-teal-950/60 dark:text-teal-200 dark:ring-teal-900 dark:hover:bg-teal-900/70;
+}
+
+.tax-chip {
+  @apply rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800 dark:border-amber-900 dark:bg-amber-950/50 dark:text-amber-200;
+}
+
+.section-title {
+  @apply text-2xl font-bold text-slate-950 dark:text-slate-100;
+}
+
+.page-heading {
+  @apply bg-gradient-to-r from-emerald-700 via-teal-700 to-sky-700 bg-clip-text text-3xl font-extrabold text-transparent dark:from-emerald-300 dark:via-teal-300 dark:to-sky-300;
+}
+
+.page-description {
+  @apply mt-2 text-slate-700 dark:text-slate-300;
+}
+
+.text-body {
+  @apply text-slate-700 dark:text-slate-300;
+}
+
+.text-muted {
+  @apply text-slate-600 dark:text-slate-400;
+}
+
+.text-label {
+  @apply text-slate-950 dark:text-slate-100;
+}
+
+.skip-link {
+  @apply sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-xl focus:bg-emerald-700 focus:px-4 focus:py-2 focus:text-white dark:focus:bg-teal-300 dark:focus:text-slate-950;
+}
+
+.tax-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.10) 1px, transparent 1px),
+    radial-gradient(circle at top right, rgba(251, 191, 36, 0.28), transparent 24rem),
+    radial-gradient(circle at bottom left, rgba(52, 211, 153, 0.22), transparent 22rem),
+    linear-gradient(135deg, #064e3b 0%, #0f766e 48%, #075985 100%);
+  background-size: 34px 34px, 34px 34px, auto, auto, auto;
+  background-position: center;
+}
+
+.animate-fade-in { animation: fade-in 0.5s ease-out forwards; }
+.animate-fade-in-up { animation: fade-in-up 0.6s ease-out forwards; }
+.animate-slide-in-right { animation: slide-in-right 0.35s ease-out forwards; }
+.animate-scale-in { animation: scale-in 0.4s ease-out forwards; }
+.animate-page-enter { animation: page-enter 0.45s ease-out forwards; }
+.animate-step-enter { animation: step-enter 0.35s ease-out forwards; }
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fade-in-up { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes slide-in-right { from { opacity: 0; transform: translateX(-12px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes scale-in { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+@keyframes page-enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes step-enter { from { opacity: 0; transform: translateX(16px); } to { opacity: 1; transform: translateX(0); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-fade-in-up,
+  .animate-slide-in-right,
+  .animate-scale-in,
+  .animate-page-enter,
+  .animate-step-enter,
+  .card,
+  .btn-primary,
+  .btn-secondary {
+    animation: none !important;
+    transition: none !important;
+  }
+}

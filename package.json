@@ -1,0 +1,29 @@
+{
+  "name": "tax-product-recommender",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node init && next dev",
+    "build": "node init && next build",
+    "start": "node init && next start",
+    "lint": "eslint .",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "next": "^15.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "latest"
+  },
+  "devDependencies": {
+    "autoprefixer": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "^15.0.0",
+    "postcss": "latest",
+    "tailwindcss": "^3.4.17",
+    "vitest": "^3.2.4"
+  }
+}
